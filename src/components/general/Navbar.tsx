@@ -5,9 +5,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-
   return (
-    <div className="flex gap-16 p-12 items-center fixed top-0 left-0 right-0 z-20">
+    <div className="flex gap-16 p-6 lg:p-12 items-center fixed top-0 left-0 right-0 z-20">
       <div>
         <p className="font-bold italic text-4xl">
           A<span className="text-cyan-500">W</span>_
@@ -41,7 +40,7 @@ const Navbar = () => {
         </li>
       </ul>
       <button
-        className="block lg:hidden fixed top-14 right-12 hover:text-cyan-500"
+        className="block lg:hidden fixed top-8 lg:top-14 right-6 lg:right-12 hover:text-cyan-500"
         onClick={() => setIsNavbarVisible(true)}>
         <FaBars size={30} />
       </button>
