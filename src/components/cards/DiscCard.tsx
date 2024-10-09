@@ -10,16 +10,16 @@ interface IDiscCard {
 
 const DiscCard: React.FC<IDiscCard> = ({ type }) => {
   return (
-    <div>
+    <div className="min-w-[300px]">
       <Image
         src={image}
         width="200"
         height="200"
         alt="disc"
-        className="aspect-square bg-black w-[300px]"
+        className="aspect-square bg-black w-[300px] h-[300px] object-cover"
       />
       <div className="my-2">
-        <p className=" text-sm ">{type}</p>
+        <p className=" text-sm font-semibold">{type}</p>
         <p className="font-bold bg-cyan-500 p-1 text-white">
           AW Beats - Rozjebie świat
         </p>
