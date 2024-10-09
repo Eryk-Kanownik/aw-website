@@ -56,27 +56,42 @@ const Navbar = () => {
         </button>
         <ul className="text-center flex flex-col gap-6">
           <li>
-            <Link href="#" className="font-semibold hover:text-cyan-500">
+            <Link
+              href="/music"
+              className="font-semibold hover:text-cyan-500"
+              onClick={() => setIsNavbarVisible(false)}>
               Muzyka
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold hover:text-cyan-500">
+            <Link
+              href="#"
+              className="font-semibold hover:text-cyan-500"
+              onClick={() => setIsNavbarVisible(false)}>
               Na żywo
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold hover:text-cyan-500">
+            <Link
+              href="#"
+              className="font-semibold hover:text-cyan-500"
+              onClick={() => setIsNavbarVisible(false)}>
               O nas
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold hover:text-cyan-500">
+            <Link
+              href="#"
+              className="font-semibold hover:text-cyan-500"
+              onClick={() => setIsNavbarVisible(false)}>
               Newsletter
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold hover:text-cyan-500">
+            <Link
+              href="#"
+              className="font-semibold hover:text-cyan-500"
+              onClick={() => setIsNavbarVisible(false)}>
               Kontakt
             </Link>
           </li>
