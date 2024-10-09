@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   return (
     <div className="flex gap-16 p-6 lg:p-12 items-center fixed top-0 left-0 right-0 z-20">
-      <div>
+      <Link href="/">
         <p className="font-bold italic text-4xl">
           A<span className="text-cyan-500">W</span>_
         </p>
-      </div>
+      </Link>
       <ul className="hidden gap-8 lg:flex">
         <li>
           <Link href="/music" className="font-semibold hover:text-cyan-500">
