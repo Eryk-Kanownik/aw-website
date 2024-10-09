@@ -15,28 +15,33 @@ const Navbar = () => {
       </div>
       <ul className="hidden gap-8 lg:flex">
         <li>
-          <Link href="#" className="font-semibold">
+          <Link href="/music" className="font-semibold hover:text-cyan-500">
             Muzyka
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold">
+          <Link href="#" className="font-semibold hover:text-cyan-500">
             Na żywo
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold">
+          <Link href="#" className="font-semibold hover:text-cyan-500">
             O nas
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold">
+          <Link href="#" className="font-semibold hover:text-cyan-500">
             Newsletter
+          </Link>
+        </li>
+        <li>
+          <Link href="#" className="font-semibold hover:text-cyan-500">
+            Kontakt
           </Link>
         </li>
       </ul>
       <button
-        className="block lg:hidden fixed top-14 right-12"
+        className="block lg:hidden fixed top-14 right-12 hover:text-cyan-500"
         onClick={() => setIsNavbarVisible(true)}>
         <FaBars size={30} />
       </button>
@@ -44,28 +49,35 @@ const Navbar = () => {
         className={`fixed top-0 right-0 bottom-0 pt-14 px-12 bg-white/90 z-30 flex flex-col items-center duration-200 w-screen ${
           !isNavbarVisible ? "translate-x-[100%]" : "translate-x-0"
         }`}>
-        <button onClick={() => setIsNavbarVisible(false)} className="self-end">
+        <button
+          onClick={() => setIsNavbarVisible(false)}
+          className="self-end hover:text-cyan-500">
           <FaTimes size={30} />
         </button>
         <ul className="text-center flex flex-col gap-6">
           <li>
-            <Link href="#" className="font-semibold text-2xl">
+            <Link href="#" className="font-semibold hover:text-cyan-500">
               Muzyka
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold text-2xl">
+            <Link href="#" className="font-semibold hover:text-cyan-500">
               Na żywo
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold text-2xl">
+            <Link href="#" className="font-semibold hover:text-cyan-500">
               O nas
             </Link>
           </li>
           <li>
-            <Link href="#" className="font-semibold text-2xl">
+            <Link href="#" className="font-semibold hover:text-cyan-500">
               Newsletter
+            </Link>
+          </li>
+          <li>
+            <Link href="#" className="font-semibold hover:text-cyan-500">
+              Kontakt
             </Link>
           </li>
         </ul>

@@ -1,0 +1,13 @@
+[
+    {
+        "coverSrc": "url",
+        "type": "Single",
+        "name":"Hello",
+        "anchors":[
+            {
+                "type":"Spotify",
+                "url": "spotify.com"
+            }
+        ]
+    }
+]
