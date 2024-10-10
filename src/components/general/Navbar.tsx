@@ -1,12 +1,20 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const path = usePathname();
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+
+  const isDarkBackground = path !== "/" && path !== "/live" ? true : false;
+
   return (
-    <div className="flex gap-16 p-6 lg:p-12 items-center fixed top-0 left-0 right-0 z-20">
+    <div
+      className={`flex gap-16 p-6 lg:px-12 lg:py-6 items-center fixed top-0 left-0 right-0 z-20 ${
+        isDarkBackground && "bg-white border-b-[1px]"
+      } `}>
       <Link href="/">
         <p className="font-bold italic text-4xl">
           A<span className="text-cyan-500">W</span>_
@@ -14,27 +22,57 @@ const Navbar = () => {
       </Link>
       <ul className="hidden gap-8 lg:flex">
         <li>
-          <Link href="/music" className="font-semibold hover:text-cyan-500">
+          <Link
+            href="/music"
+            className={`font-semibold  ${
+              !isDarkBackground
+                ? "text-cyan-500 hover:text-cyan-600"
+                : "hover:text-cyan-500"
+            }`}>
             Muzyka
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold hover:text-cyan-500">
+          <Link
+            href="/live"
+            className={`font-semibold  ${
+              !isDarkBackground
+                ? "text-cyan-500 hover:text-cyan-600"
+                : "hover:text-cyan-500"
+            }`}>
             Na żywo
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold hover:text-cyan-500">
+          <Link
+            href="/about-us"
+            className={`font-semibold  ${
+              !isDarkBackground
+                ? "text-cyan-500 hover:text-cyan-600"
+                : "hover:text-cyan-500"
+            }`}>
             O nas
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold hover:text-cyan-500">
+          <Link
+            href="/newsletter"
+            className={`font-semibold  ${
+              !isDarkBackground
+                ? "text-cyan-500 hover:text-cyan-600"
+                : "hover:text-cyan-500"
+            }`}>
             Newsletter
           </Link>
         </li>
         <li>
-          <Link href="#" className="font-semibold hover:text-cyan-500">
+          <Link
+            href="/contact"
+            className={`font-semibold  ${
+              !isDarkBackground
+                ? "text-cyan-500 hover:text-cyan-600"
+                : "hover:text-cyan-500"
+            }`}>
             Kontakt
           </Link>
         </li>
@@ -64,7 +102,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/live"
               className="font-semibold hover:text-cyan-500"
               onClick={() => setIsNavbarVisible(false)}>
               Na żywo
@@ -72,7 +110,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/about-us"
               className="font-semibold hover:text-cyan-500"
               onClick={() => setIsNavbarVisible(false)}>
               O nas
@@ -80,7 +118,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/newsletter"
               className="font-semibold hover:text-cyan-500"
               onClick={() => setIsNavbarVisible(false)}>
               Newsletter
@@ -88,7 +126,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="/contact"
               className="font-semibold hover:text-cyan-500"
               onClick={() => setIsNavbarVisible(false)}>
               Kontakt
