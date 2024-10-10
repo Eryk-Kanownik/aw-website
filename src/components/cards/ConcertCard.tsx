@@ -7,8 +7,8 @@ interface IConcertCard {
 
 const ConcertCard: React.FC<IConcertCard> = ({ date, place }) => {
   const past = (date: string) => {
-    let d = new Date(date);
-    let current = new Date();
+    const d = new Date(date);
+    const current = new Date();
     return d < current ? true : false;
   };
 
