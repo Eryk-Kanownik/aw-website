@@ -1,19 +1,21 @@
 import Link from "next/link";
 import React from "react";
-import { FaSpotify, FaYoutube } from "react-icons/fa";
+import { FaAmazon, FaSpotify, FaYoutube } from "react-icons/fa";
 
 interface IMediaLink {
-  type: string;
+  platform: string;
   url: string;
 }
 
-const MediaLink: React.FC<IMediaLink> = ({ type, url }) => {
-  const icon = (type: string) => {
-    switch (type) {
+const MediaLink: React.FC<IMediaLink> = ({ platform, url }) => {
+  const icon = (platform: string) => {
+    switch (platform) {
       case "Spotify":
         return <FaSpotify />;
       case "Youtube":
         return <FaYoutube />;
+      case "Amazon Music":
+        return <FaAmazon />;
     }
     return;
   };
@@ -22,8 +24,8 @@ const MediaLink: React.FC<IMediaLink> = ({ type, url }) => {
     <Link
       href={url}
       className="flex justify-center items-center border-[1px] gap-2 px-2 py-1 rounded-md hover:bg-cyan-500 hover:text-white">
-      <span className="text-sm font-semibold">{type}</span>
-      <span>{icon(type)}</span>
+      <span className="text-sm font-semibold">{platform}</span>
+      <span>{icon(platform)}</span>
     </Link>
   );
 };

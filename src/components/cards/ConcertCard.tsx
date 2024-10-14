@@ -19,7 +19,7 @@ const ConcertCard: React.FC<IConcertCard> = ({ date, place }) => {
       <p className="font-semibold">{place}</p>
       <button className="border-[1px] px-2 py-1 rounded-md">Bilety</button>
       <div
-        className={`absolute h-2 bg-cyan-500 shadow-md duration-200 rounded-md ${
+        className={`absolute left-0 h-1 bg-cyan-500 shadow-md duration-200 ${
           past(date) === true && "w-[100%]"
         }`}></div>
     </div>

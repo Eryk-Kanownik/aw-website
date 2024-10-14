@@ -54,17 +54,7 @@ const Navbar = () => {
             O nas
           </Link>
         </li>
-        <li>
-          <Link
-            href="/newsletter"
-            className={`font-semibold  ${
-              !isDarkBackground
-                ? "text-cyan-500 hover:text-cyan-600"
-                : "hover:text-cyan-500"
-            }`}>
-            Newsletter
-          </Link>
-        </li>
+
         <li>
           <Link
             href="/contact"

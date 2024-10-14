@@ -4,10 +4,10 @@ import image from "../../../public/cover.png";
 
 const page = () => {
   return (
-    <div className=" px-6 pt-24 lg:px-12 lg:pt-36 min-h-screen flex justify-center">
-      <div className="w-[50%] ">
+    <div className=" px-6 pb-6 pt-24 lg:px-12 lg:pt-36 min-h-screen flex justify-center">
+      <div className="w-[100%] lg:w-[50%] ">
         <h1 className="mb-4 font-bold text-2xl ">O nas</h1>
-        <div className="grid grid-cols-2 gap-4 mb-2">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-2">
           <Image
             src={image}
             width="200"

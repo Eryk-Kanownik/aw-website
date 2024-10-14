@@ -5,17 +5,16 @@ import concerts from "../../../public/concerts/concerts.json";
 const page = () => {
   return (
     <div className="px-6 py-24 lg:px-12 lg:py-36 min-h-screen flex items-center justify-center flex-col ">
-      <div className="z-10 bg-white p-4 rounded-md">
+      <div className="z-10  p-4 bg-black text-white">
         <h1 className="mb-4 font-bold text-2xl text-center">
           Zbliżające się koncerty
         </h1>
-        <div className="w-96 bg-white">
+        <div className="w-96 text-white">
           {concerts.map(({ date, place }, key: React.Key) => (
             <ConcertCard key={key} date={date} place={place} />
           ))}
         </div>
       </div>
-
       <video
         autoPlay
         loop

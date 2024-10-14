@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-28 px-6 lg:px-12">
+    <div className="px-6 pt-24 lg:px-12 lg:pt-36 min-h-screen">
       <h1 className="mb-4 font-bold text-2xl ">Kontakt</h1>
       <form className="flex flex-col">
         <div className="grid grid-cols-2 gap-2 mb-2">

@@ -1,11 +1,17 @@
 [
     {
-        "coverSrc": "url",
+        "coverSrc": "https://picsum.photos/200/300",
         "type": "Single",
-        "name":"Hello",
+        "name":"AW BEATS - Rozrywka",
         "anchors":[
             {
-                "type":"Spotify",
+                "platform":"Spotify",
+                "url": "spotify.com"
+            }, {
+                "platform":"Youtube",
+                "url": "spotify.com"
+            }, {
+                "platform":"Amazon Music",
                 "url": "spotify.com"
             }
         ]
